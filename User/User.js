@@ -14,6 +14,18 @@ import UserDetail from './UserDetail';
 // }
 
 class User extends Component {
+    constructor(){
+        super();
+        this.state={
+            time: new Date().getHours() + ":" + new Date().getMinutes()
+        }
+    }
+    
+    timeClick = () => {
+        this.setState({
+            time: new Date().getHours() + ":" + new Date().getMinutes()
+        });
+    }
     myUserData = {
         username: "Max Payne",
         job: "Police Officer",
@@ -25,6 +37,11 @@ class User extends Component {
                 <p>user page works1!</p>
                 <p>You are visitor number: {this.props.sentNumber}</p>
                 <UserDetail userData={this.myUserData} />
+                <button 
+                    onClick={this.timeClick}>
+                    Update Time
+                </button>
+                <p>Time: {this.state.time.toString()}</p>
             </div>
         )
     }
