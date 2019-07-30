@@ -14,12 +14,17 @@ import UserDetail from './UserDetail';
 // }
 
 class User extends Component {
+    myUserData = {
+        username: "Max Payne",
+        job: "Police Officer",
+        age: "35"
+    }
     render() {
         return (
             <div>
                 <p>user page works1!</p>
-                <p>The number passed to SubComponent was: {this.props.sentNumber}</p>
-                <UserDetail />
+                <p>You are visitor number: {this.props.sentNumber}</p>
+                <UserDetail userData={this.myUserData} />
             </div>
         )
     }
