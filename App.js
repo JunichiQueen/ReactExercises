@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import User from './User/User.js';
+import MyComponent from './Component/MyComponent.js';
 
 // class App extends Component {
 //   number = 4;
@@ -25,6 +26,7 @@ class App extends Component {
       <div>
         <h1>User</h1>
         <User sentNumber={this.number}/>
+        <MyComponent />
       </div>
       
     );

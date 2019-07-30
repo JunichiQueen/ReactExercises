@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TimeButton from './TimeButton.js';
+import { Button } from 'reactstrap';
 
 class UserDetail extends Component {
     constructor(){
@@ -24,7 +25,7 @@ class UserDetail extends Component {
                 <li>I live in {this.state.residence}</li>
             </ul>
             <input id='newres'></input>
-                <button onClick={this.changeResidence}>Update Residence</button>
+                <Button color="success" outline={true} onClick={this.changeResidence}>Update Residence</Button>
             <TimeButton />
             
         </div>);
